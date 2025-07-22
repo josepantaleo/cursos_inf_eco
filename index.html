@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Propuesta de Cursos para Docentes de Secundaria</title>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        background: #f0f4f8;
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+        max-width: 900px;
+        margin: 30px auto 60px; /* margen inferior para footer */
+        padding: 0 20px;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        color: #004085;
+        text-align: center;
+        margin-bottom: 15px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      p.intro {
+        font-size: 1.1rem;
+        max-width: 750px;
+        margin: 0 auto 40px;
+        color: #555;
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      nav#main-nav {
+        background: #0056b3;
+        padding: 12px 0;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+      }
+
+      nav#main-nav a {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      nav#main-nav a:hover,
+      nav#main-nav a:focus {
+        background-color: #003f7d;
+        outline: none;
+      }
+
+      .category {
+        border-left: 6px solid #0056b3;
+        background: white;
+        padding: 25px 30px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgb(0 0 0 / 0.07);
+      }
+
+      .economia.category {
+        border-color: #b35c00;
+      }
+
+      nav.sub-nav {
+        margin-bottom: 30px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      nav.sub-nav a {
+        background: #e9ecef;
+        color: #0056b3;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      nav.sub-nav a:hover,
+      nav.sub-nav a:focus {
+        background-color: #0056b3;
+        color: white;
+        outline: none;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 18px;
+        color: #222;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 6px;
+      }
+
+      section h4 {
+        font-size: 1.2rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        color: #444;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 25px;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      ul li {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      footer {
+        flex-shrink: 0;
+        background: #222;
+        color: #ddd;
+        text-align: center;
+        padding: 15px 20px;
+        font-size: 0.9rem;
+        box-shadow: 0 -4px 10px rgb(0 0 0 / 0.3);
+      }
+
+      footer a {
+        color: #ffc107;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover,
+      footer a:focus {
+        color: #fff176;
+        outline: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        nav#main-nav {
+          flex-direction: column;
+          gap: 12px;
+        }
+        main {
+          margin: 20px 15px 70px;
+          padding: 0 10px;
+        }
+        section h2 {
+          font-size: 1.8rem;
+        }
+        section h3 {
+          font-size: 1.3rem;
+        }
+        section h4 {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Propuesta de Cursos para Docentes de Nivel Secundario</h1>
+      <p class="intro">
+        Presentamos una propuesta integral de formación para docentes con
+        orientación en <strong>Informática</strong> y <strong>Economía</strong>,
+        diseñada para fortalecer sus competencias técnicas y pedagógicas
+        mediante una combinación equilibrada de teoría sólida y práctica
+        aplicada. Estos cursos ofrecen herramientas actualizadas que facilitan
+        la enseñanza en las asignaturas correspondientes, promoviendo un
+        aprendizaje activo, significativo y contextualizado para los
+        estudiantes. El orden de presentación de los contenidos refleja la
+        progresión temática que se desarrolla a lo largo de 4º, 5º y 6º año.
+      </p>
+
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a href="#informatica">Informática</a>
+        <a href="#economia">Economía</a>
+      </nav>
+
+      <section
+        id="informatica"
+        class="category"
+        tabindex="0"
+        aria-label="Cursos para docentes de Informática"
+      >
+        <h2>INFORMÁTICA</h2>
+
+        <nav class="sub-nav" aria-label="Subnavegación Informática">
+          <a href="#vscode">Visual Studio Code</a>
+          <a href="#htmlcss">Desarrollo Web (HTML y CSS)</a>
+          <a href="#git">Control de Versiones (Git y GitHub)</a>
+          <a href="#python">Programación con Python</a>
+          <a href="#sql">Bases de Datos (SQL)</a>
+        </nav>
+
+        <section id="vscode" tabindex="0" aria-label="Curso Visual Studio Code">
+          <h3>Visual Studio Code</h3>
+          <ul>
+            <li>Instalación, configuración y exploración de la interfaz.</li>
+            <li>
+              Uso de Explorer, Search, Source Control (Git), Debugger y
+              Extensiones.
+            </li>
+            <li>Atajos de teclado, snippets, Emmet y GitHub Copilot.</li>
+          </ul>
+        </section>
+
+        <section
+          id="htmlcss"
+          tabindex="0"
+          aria-label="Curso Desarrollo Web HTML y CSS"
+        >
+          <h3>Desarrollo Web: HTML y CSS</h3>
+
+          <h4>HTML Básico</h4>
+          <ul>
+            <li>Estructura de etiquetas y páginas web.</li>
+            <li>
+              Encabezados, párrafos, listas, enlaces, imágenes y formularios.
+            </li>
+          </ul>
+
+          <h4>CSS Básico e Intermedio</h4>
+          <ul>
+            <li>Selectores, fuentes, modelo de caja, colores y sombras.</li>
+            <li>
+              Fondos, unidades, posicionamiento, transiciones y animaciones.
+            </li>
+          </ul>
+
+          <h4>Flexbox y Grid</h4>
+          <ul>
+            <li>Diseño responsivo con Flexbox y CSS Grid.</li>
+          </ul>
+
+          <h4>Proyectos Prácticos</h4>
+          <ul>
+            <li>
+              Creación de menús, chatbox, flip cards, páginas one page y
+              acordeones.
+            </li>
+          </ul>
+        </section>
+
+        <section
+          id="git"
+          tabindex="0"
+          aria-label="Curso Control de Versiones con Git y GitHub"
+        >
+          <h3>Control de Versiones con Git y GitHub</h3>
+          <ul>
+            <li>Instalación y configuración básica.</li>
+            <li>Commits, ramas, merges y resolución de conflictos.</li>
+            <li>
+              Uso avanzado: .gitignore, reflog, alias, forks, pull requests y
+              issues.
+            </li>
+          </ul>
+        </section>
+
+        <section
+          id="python"
+          tabindex="0"
+          aria-label="Curso Programación con Python"
+        >
+          <h3>Programación con Python</h3>
+
+          <h4>Introducción y Fundamentos</h4>
+          <ul>
+            <li>Características, usos, entorno y fundamentos de Python.</li>
+            <li>
+              Variables, tipos, operadores, condicionales y estructuras de
+              control.
+            </li>
+          </ul>
+
+          <h4>Programación Básica e Intermedia</h4>
+          <ul>
+            <li>
+              Manejo de cadenas, listas, diccionarios, funciones, lambda y
+              bucles.
+            </li>
+          </ul>
+
+          <h4>Programación Avanzada</h4>
+          <ul>
+            <li>
+              Módulos, manejo de archivos, excepciones, expresiones regulares y
+              gráficos básicos.
+            </li>
+          </ul>
+        </section>
+
+        <section
+          id="sql"
+          tabindex="0"
+          aria-label="Curso Bases de Datos con SQL"
+        >
+          <h3>Bases de Datos con SQL</h3>
+
+          <h4>Fundamentos y Modelado</h4>
+          <ul>
+            <li>
+              Introducción a SQL, modelos entidad-relación y bases de datos
+              relacionales.
+            </li>
+          </ul>
+
+          <h4>Práctica y Consultas</h4>
+          <ul>
+            <li>
+              Creación de tablas, consultas SELECT, INSERT, funciones agregadas
+              y joins.
+            </li>
+          </ul>
+
+          <h4>Temas Avanzados</h4>
+          <ul>
+            <li>
+              Procedimientos almacenados, transacciones y integración con
+              Python.
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section
+        id="economia"
+        class="category economia"
+        tabindex="0"
+        aria-label="Cursos para docentes de Economía"
+      >
+        <h2>ECONOMÍA</h2>
+
+        <nav class="sub-nav" aria-label="Subnavegación Economía">
+          <a href="#trading">Trading</a>
+        </nav>
+
+        <section id="trading" tabindex="0" aria-label="Curso de Trading">
+          <h3>Trading</h3>
+
+          <h4>Introducción al Trading</h4>
+          <ul>
+            <li>
+              Conceptos fundamentales, mercados financieros y plataformas
+              digitales.
+            </li>
+          </ul>
+
+          <h4>Análisis Técnico</h4>
+          <ul>
+            <li>
+              Interpretación de gráficos, velas japonesas, soportes y
+              resistencias.
+            </li>
+            <li>Tendencias, patrones chartistas y análisis de volumen.</li>
+          </ul>
+
+          <h4>Uso de TradingView</h4>
+          <ul>
+            <li>
+              Exploración de la plataforma para análisis gráfico y toma de
+              decisiones.
+            </li>
+          </ul>
+
+          <h4>Estrategias y Gestión del Riesgo</h4>
+          <ul>
+            <li>
+              Estrategias de trading, gestión del riesgo, apalancamiento y
+              psicología del inversor.
+            </li>
+          </ul>
+
+          <h4>Trading de Criptomonedas</h4>
+          <ul>
+            <li>
+              Introducción al mercado de criptomonedas y aspectos específicos de
+              su negociación.
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      Prof. Cs Económicas y Análista de Sistemas José Pantaleo -
+      <a href="mailto:josepantaleo@gmail.com" tabindex="0"
+        >josepantaleo@gmail.com</a
+      >
+    </footer>
+  </body>
+</html>
